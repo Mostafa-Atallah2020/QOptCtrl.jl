@@ -1,0 +1,7 @@
+name = "QOptCtrl"
+uuid = "e46cd9a7-9bb7-4eb0-94bd-d5b6eb195bcf"
+authors = ["Mostafa Atallah <m.ataallah.2014@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
