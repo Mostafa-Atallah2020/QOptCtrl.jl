@@ -1,12 +1,14 @@
-using QOptCtrl, LinearAlgebra, Optim
+using QOptCtrl
 
 X = pauli_X
 Y = pauli_Y
 Z = pauli_Z
 H = 1/sqrt(2)*[1 1; 1 -1] # Hadamard Gate
 
+ω = 1
+
 prob = GateTransfer(
-        0.25*Z, # drift Hamiltonian
+        (ω/2)*Z, # drift Hamiltonian
         [X, Y], # control Hamiltonians
         20, # number of steps
         4, # transfer time
@@ -14,5 +16,5 @@ prob = GateTransfer(
         rand(20, 2) #initial guess
 )
 
-init_ctrl_arr,  final_ctrl_arr = AUTO_DIFF(prob)
+init_ctrl_arr,  final_ctrl_arr = OPTIMIZE(prob)
 visualise_pulses(init_ctrl_arr, final_ctrl_arr)

@@ -87,7 +87,7 @@ function AUTO_DIFF(prob)
 end
 =#
 
-function AUTO_DIFF(prob::GateTransfer)
+function OPTIMIZE(prob::GateTransfer)
     cost(u) = gate_infid(prob.drift_Ham, prob.ctrl_Hams, prob.n_steps, prob.transfer_time, u, prob.tar_gate)
     init_ctrl_arr = prob.init_guess
 
@@ -98,7 +98,7 @@ function AUTO_DIFF(prob::GateTransfer)
     return init_ctrl_arr, final_ctrl_arr
 end
 
-function AUTO_DIFF(prob::StateTransfer)
+function OPTIMIZE(prob::StateTransfer)
     cost(u) = state_infid(prob.drift_Ham, prob.ctrl_Hams, prob.n_steps, prob.transfer_time, u, prob.init_state, prob.tar_state)
     init_ctrl_arr = prob.init_guess
 
