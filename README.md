@@ -1,6 +1,6 @@
 # QOptCtrl.jl
 
-A general package on Quantum Control.
+A general package on Quantum Optimal Control.
 
 This project aims at developing a general purpose library for implementing gates in the presence of noise or other physical/hardware restrictions.
 
