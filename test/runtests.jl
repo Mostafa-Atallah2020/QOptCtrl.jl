@@ -1,3 +1,2 @@
 using Test
 
-@test true
