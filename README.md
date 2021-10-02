@@ -23,9 +23,9 @@ A few examples are engineering an arbitrary single qubit gate in the presence of
 To jump straight in and begin using `QOptCtrl` run the following in your Julia REPL:
 
 ```julia-repl
-pkg> add Package
+pkg> add <Package>
 
-julia> using Package
+julia> using <Package>
 ```
 
 [Julia]: https://www.julialang.org
